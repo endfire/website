@@ -1,6 +1,12 @@
 'use strict';
 
-var stripePublicKey = 'pk_test_7Ud0jchdNbKU9qthAxdSSJlZ';
+var stripePublicKey = window.__env.USE_TEST ? window.__env.STRIPE_TEST_PK : window.__env.STRIPE_LIVE_PK;
+
+console.log(window.__env.USE_TEST);
+console.log(window.__env.STRIPE_TEST_PK);
+console.log(window.__env.STRIPE_LIVE_PK);
+console.log(stripePublicKey);
+
 var apiUrl = window.__env.API_URL;
 Stripe.setPublishableKey(stripePublicKey);
 

@@ -1,4 +1,4 @@
-const stripePublicKey = 'pk_test_7Ud0jchdNbKU9qthAxdSSJlZ';
+const stripePublicKey = window.__env.USE_TEST ? window.__env.STRIPE_TEST_PK : window.__env.STRIPE_LIVE_PK;
 const apiUrl = window.__env.API_URL;
 Stripe.setPublishableKey(stripePublicKey);
 
