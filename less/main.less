@@ -1,0 +1,218 @@
+@endfire-orange: #FFA700;
+@endfire-black: #333;
+@endfire-red: #F32D00;
+
+@font-face {
+  font-family: 'Bebas';
+  src: url('../../fonts/bebas.ttf');
+}
+
+body {
+  background-color: @endfire-red;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.cover {
+  height: 100vh;
+}
+
+.intro {
+  background: url(../../images/bg.png);
+
+  .logo {
+    padding-top: 100px;
+    color: white;
+
+    h1 {
+      font-weight: 100;
+      font-size: 60px;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .intro-links {
+    .btn-link {
+      color: white;
+    }
+  }
+}
+
+.about {
+  background: white;
+  padding-bottom: 300px;
+  /*
+  background-image: url(../../images/team.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  */
+
+  .about-info {
+    padding-top: 40px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.education {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#333333+0,000000+100 */
+  background: rgb(51,51,51); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(51,51,51,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,51,51,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(51,51,51,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+  padding-top: 120px;
+  color: white;
+
+  small {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+  }
+
+  li {
+    padding-left: 1em;
+    text-indent: -.7em;
+  }
+
+  li:before {
+    content: '\f0c8';
+    color: @endfire-red;
+    padding-right: 8px;
+    font-family: 'FontAwesome';
+  }
+
+  .education-info {
+    padding-top: 40px;
+  }
+
+  .calendar {
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    color: #333;
+
+    .calendar-body {
+      background: white;
+      border-radius: 4px;
+      border-top: 6px solid @endfire-red;
+      padding: 8px;
+
+      .calendar-date {
+        font-family: 'Bebas';
+      }
+    }
+  }
+}
+
+#education-register {
+  input.form-control {
+    background: rgb(240, 240, 240);
+  }
+
+  .modal-body {
+    background: rgb(230, 230, 230);
+  }
+}
+
+.consulting {
+  background: white;
+  padding-top: 40px;
+}
+
+.contact {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f76700+0,f32d00+100 */
+  background: rgb(247,103,0); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(247,103,0,1) 0%, rgba(243,45,0,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(247,103,0,1)), color-stop(100%,rgba(243,45,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(247,103,0,1) 0%,rgba(243,45,0,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(247,103,0,1) 0%,rgba(243,45,0,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(247,103,0,1) 0%,rgba(243,45,0,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(247,103,0,1) 0%,rgba(243,45,0,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f76700', endColorstr='#f32d00',GradientType=0 ); /* IE6-9 */
+
+  color: white;
+  padding-top: 40px;
+}
+
+footer {
+  padding: 10px;
+  color: white;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.fire {
+  font-weight: bold;
+  color: @endfire-red;
+  text-shadow: 0px 0px 2px rgba(255, 0, 0, 0.32);
+}
+
+.form-control {
+  border-radius: 0;
+  border: none;
+  font-family: 'FontAwesome';
+}
+
+.btn {
+  border-radius: 0;
+  border: none;
+
+  &:focus,
+  &:active,
+  &:hover {
+    outline: 0 !important;
+  }
+}
+
+.btn-red {
+  color: white;
+  background: @endfire-red;
+
+  &:focus,
+  &:active,
+  &:hover {
+    color: rgb(240, 240, 240);
+  }
+}
+
+.btn-black {
+  color: white;
+  background: #333;
+
+  &:focus,
+  &:active,
+  &:hover {
+    color: rgb(240, 240, 240);
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+  border: none;
+
+  .modal-header {
+    background: @endfire-red;
+    border: none;
+    color: white;
+  }
+}

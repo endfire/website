@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'Bebas';
+  src: url('../../fonts/bebas.ttf');
+}
+body {
+  background-color: #f32d00;
+}
+textarea {
+  resize: vertical;
+}
+.cover {
+  height: 100vh;
+}
+.intro {
+  background: url(../../images/bg.png);
+}
+.intro .logo {
+  padding-top: 100px;
+  color: white;
+}
+.intro .logo h1 {
+  font-weight: 100;
+  font-size: 60px;
+}
+.intro .logo img {
+  width: 200px;
+  height: 200px;
+}
+.intro .intro-links .btn-link {
+  color: white;
+}
+.about {
+  background: white;
+  padding-bottom: 300px;
+  /*
+  background-image: url(../../images/team.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  */
+}
+.about .about-info {
+  padding-top: 40px;
+}
+.about img {
+  width: 100%;
+}
+.education {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#333333+0,000000+100 */
+  background: #333333;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #333333 0%, #000000 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #000000));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #333333 0%, #000000 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #333333 0%, #000000 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #333333 0%, #000000 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #333333 0%, #000000 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#000000', GradientType=0);
+  /* IE6-9 */
+  padding-top: 120px;
+  color: white;
+}
+.education small {
+  color: rgba(255, 255, 255, 0.7);
+}
+.education ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.education li {
+  padding-left: 1em;
+  text-indent: -0.7em;
+}
+.education li:before {
+  content: '\f0c8';
+  color: #f32d00;
+  padding-right: 8px;
+  font-family: 'FontAwesome';
+}
+.education .education-info {
+  padding-top: 40px;
+}
+.education .calendar {
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  color: #333;
+}
+.education .calendar .calendar-body {
+  background: white;
+  border-radius: 4px;
+  border-top: 6px solid #f32d00;
+  padding: 8px;
+}
+.education .calendar .calendar-body .calendar-date {
+  font-family: 'Bebas';
+}
+#education-register input.form-control {
+  background: #f0f0f0;
+}
+#education-register .modal-body {
+  background: #e6e6e6;
+}
+.consulting {
+  background: white;
+  padding-top: 40px;
+}
+.contact {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f76700+0,f32d00+100 */
+  background: #f76700;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f76700 0%, #f32d00 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f76700), color-stop(100%, #f32d00));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f76700 0%, #f32d00 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f76700 0%, #f32d00 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f76700 0%, #f32d00 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f76700 0%, #f32d00 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f76700', endColorstr='#f32d00', GradientType=0);
+  /* IE6-9 */
+  color: white;
+  padding-top: 40px;
+}
+footer {
+  padding: 10px;
+  color: white;
+}
+.full-width {
+  width: 100%;
+}
+.fire {
+  font-weight: bold;
+  color: #f32d00;
+  text-shadow: 0px 0px 2px rgba(255, 0, 0, 0.32);
+}
+.form-control {
+  border-radius: 0;
+  border: none;
+  font-family: 'FontAwesome';
+}
+.btn {
+  border-radius: 0;
+  border: none;
+}
+.btn:focus,
+.btn:active,
+.btn:hover {
+  outline: 0 !important;
+}
+.btn-red {
+  color: white;
+  background: #f32d00;
+}
+.btn-red:focus,
+.btn-red:active,
+.btn-red:hover {
+  color: #f0f0f0;
+}
+.btn-black {
+  color: white;
+  background: #333;
+}
+.btn-black:focus,
+.btn-black:active,
+.btn-black:hover {
+  color: #f0f0f0;
+}
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+.modal-content .modal-header {
+  background: #f32d00;
+  border: none;
+  color: white;
+}

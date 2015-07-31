@@ -1,2 +1,2 @@
 # website
-Endfire.io
+Endfire.io's website, hosted in Divshot.

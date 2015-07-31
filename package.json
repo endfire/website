@@ -1,0 +1,36 @@
+{
+  "name": "endfire",
+  "version": "0.0.1",
+  "description": "Endfire.io",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "npm run build && divshot push",
+    "deploy:staging": "npm run build && divshot push staging",
+    "deploy:production": "npm run build && divshot push production",
+    "start": "npm run build && ss --port 3000",
+    "build": "npm run build:js && npm run build:less",
+    "build:js": "babel js --out-dir public/assets/dist/js && uglifyjs public/assets/dist/js/main.js -o public/assets/dist/js/main.min.js",
+    "build:less": "lessc less/main.less > public/assets/dist/css/main.css && cleancss public/assets/dist/css/main.css -o public/assets/dist/css/main.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endfire/website.git"
+  },
+  "keywords": [
+    "endfire",
+    "full-stack"
+  ],
+  "author": "Dylan Slack <dylanslack@gmail.com> (http://www.dylanslack.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/endfire/website/issues"
+  },
+  "homepage": "https://github.com/endfire/website#readme",
+  "devDependencies": {
+    "babel": "^5.8.5",
+    "clean-css": "^3.3.6",
+    "less": "^2.5.1",
+    "superstatic": "^2.2.1",
+    "uglify-js": "^2.4.24"
+  }
+}
