@@ -118,6 +118,11 @@ textarea {
 #register .modal-body .form-group {
   margin-bottom: 0;
 }
+#register .error {
+  padding: 6px;
+  background: #6a1400;
+  color: white;
+}
 .consulting {
   background: white;
   padding-top: 40px;

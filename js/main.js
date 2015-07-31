@@ -10,11 +10,16 @@ $(function($) {
     $form.find('button').prop('disabled', true);
 
     Stripe.card.createToken($form, (status, response) => {
-      const $form = $(this);
+      const $register = $('#register');
 
       if (response.error) {
         $form.find('.payment-errors').text(response.error.message);
         $form.find('button').prop('disabled', false);
+        $register.find('.error').removeClass('hidden');
+
+        setTimeout(() => {
+          $register.find('.error').addClass('hidden');
+        }, 2000);
       } else {
         const token = response.id;
         const email = $form.find('.email');
@@ -42,6 +47,17 @@ $(function($) {
         }).then(res => {
           if (res.paid) {
             window.location = '/receipt';
+
+            email.val('');
+            name.val('');
+            coupon.val('');
+          } else {
+            $form.find('button').prop('disabled', false);
+            $register.find('.error').removeClass('hidden');
+
+            setTimeout(() => {
+              $register.find('.error').addClass('hidden');
+            }, 2000);
           }
         });
       }
