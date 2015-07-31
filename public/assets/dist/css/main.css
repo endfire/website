@@ -102,11 +102,21 @@ textarea {
 .education .calendar .calendar-body .calendar-date {
   font-family: 'Bebas';
 }
-#education-register input.form-control {
-  background: #f0f0f0;
+#register input.form-control:active,
+#register input.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none;
+  border-bottom: 1px solid #f32d00;
 }
-#education-register .modal-body {
+#register div[class^="col-"] {
+  padding: 0;
+}
+#register .modal-body {
   background: #e6e6e6;
+}
+#register .modal-body .form-group {
+  margin-bottom: 0;
 }
 .consulting {
   background: white;
@@ -185,4 +195,11 @@ footer {
   background: #f32d00;
   border: none;
   color: white;
+}
+#receipt {
+  border-top: 6px solid #333;
+  margin-top: 120px;
+  padding: 80px;
+  background: white;
+  border-radius: 5px;
 }

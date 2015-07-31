@@ -64,7 +64,7 @@
       <img class="full-width" src="/assets/images/curriculum.png" alt=""/>
       <div class="clearfix">
         <div class="col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10">
-          <h2>Curriculum</h2>
+          <h3>Curriculum</h3>
         </div>
         <div class="col-md-offset-2 col-md-4 col-lg-offset-2 col-lg-4">
           <p>
@@ -92,14 +92,14 @@
             resources that will help you the most, and we offer our own team as a learning resource
             even after the 16 hours are over.
           </p>
-          <button type="button" class="btn btn-red" data-spy="scroll" data-target="#contact">
-            Need more information?
-          </button>
+          <a href="#contact" class="btn btn-red" data-spy="scroll" data-target="#contact">
+            Need more information? Contact us!
+          </a>
         </div>
       </div>
       <div class="clearfix">
         <div class="col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10">
-          <h2>Schedule</h2>
+          <h3>Schedule</h3>
         </div>
         <div class="col-md-offset-2 col-md-4 col-lg-offset-2 col-lg-4">
           <p>
@@ -140,17 +140,17 @@
       </div>
       <div class="clearfix">
         <div class="col-md-offset-2 col-md-4 col-lg-offset-2 col-lg-4">
-          <h2>Pricing</h2>
+          <h3>Pricing</h3>
           <p>
             The class price is <strong>$1000</strong>. This includes the 16 hours of
             class time and post-course office hours where we'll help you build your own app.
             This price also includes hand selected books, pamphlets, and other valuable resources.
           </p>
           <p>
-            Spots are filling up! After registering, you will receive instructions in the
+            After registering, you will receive instructions in the
             receipt.
           </p>
-          <button type="button" class="btn btn-red" data-toggle="modal" data-target="#education-register">
+          <button type="button" class="btn btn-red" data-toggle="modal" data-target="#register">
             Register now
           </button>
         </div>
@@ -186,7 +186,7 @@
     </footer>
   </div>
 
-  <div class="modal fade" id="education-register" tabindex="-1" role="dialog" aria-labelledby="education-register">
+  <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="register">
     <div class="modal-dialog modal-sm" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -196,54 +196,78 @@
         <div class="modal-body">
           <form>
             <label>Payment info</label>
-            <div class="form-group">
-              <input type="text" class="form-control" name="register-email" placeholder="&#xf003;&nbsp; Email address">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="register-number" placeholder="&#xf09d;&nbsp; Credit card number">
-            </div>
-            <div class="form-group">
-              <div class="row">
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" name="register-expiration" placeholder="&#xf133;&nbsp; MM/YY">
-                </div>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" name="register-security" placeholder="&#xf023;&nbsp; CVC">
+            <div style="border: 1px solid rgb(200, 200, 200);">
+              <div class="form-group">
+                <input type="text" class="form-control name" data-stripe="name" placeholder="&#xf007;&nbsp; Full name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control email" data-stripe="email" placeholder="&#xf003;&nbsp; Email address">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" data-stripe="number" placeholder="&#xf09d;&nbsp; Credit card number">
+              </div>
+              <div class="form-group">
+                <div class="clearfix">
+                  <div class="col-sm-3">
+                    <input type="text" class="form-control" data-stripe="exp_month" placeholder="&#xf133;&nbsp; MM">
+                  </div>
+                  <div class="col-sm-3">
+                    <input type="text" class="form-control" data-stripe="exp_year" placeholder="&#xf133;&nbsp; YY">
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" data-stripe="cvc" placeholder="&#xf023;&nbsp; CVC">
+                  </div>
                 </div>
               </div>
+              <div class="form-group has-success has-feedback">
+                <input type="text" class="form-control coupon" placeholder="&#xf155;&nbsp; Coupon code">
+                <span class="glyphicon glyphicon-ok form-control-feedback coupon-success hidden" aria-hidden="true"></span>
+              </div>
             </div>
+            <br>
             <label>Experience</label>
             <div class="checkbox">
               <label>
-                <input type="checkbox"> Do you know what a frontend is?
+                <input type="checkbox" class="meta-frontend"> Do you know what a frontend is?
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox"> Do you know what a backend is?
+                <input type="checkbox" class="meta-backend"> Do you know what a backend is?
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox"> Do you know what a database is?
+                <input type="checkbox" class="meta-database"> Do you know what a database is?
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox"> Do you have any programming experience?
+                <input type="checkbox" class="meta-experience"> Do you have any programming experience?
               </label>
             </div>
-            <button type="submit" disabled class="disabled btn btn-red btn-block">
-              Registration opens Aug 1st
+            <button type="submit" class="btn btn-red btn-block">
+              Pay now $<span class="price">1000</span>
             </button>
           </form>
         </div>
       </div>
     </div>
   </div>
+  <script src="/__/env.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <script src="https://js.stripe.com/v2/"></script>
   <script src="/assets/dist/js/main.min.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-65843268-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
 </html>
