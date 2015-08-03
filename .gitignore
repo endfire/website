@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 .divshot-cache
 .env.json
+public/assets/dist
+npm-debug.log
