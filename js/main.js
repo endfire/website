@@ -3,6 +3,15 @@ const apiUrl = window.__env.API_URL;
 Stripe.setPublishableKey(stripePublicKey);
 
 $(function($) {
+  // wake up heroku
+  $.ajax({
+    url: `${apiUrl}`,
+    type: 'GET',
+    dataType: 'json'
+  }).then(res => {
+    console.log('Heroku has awaken!');
+  });
+
   $('#register form').submit((e) => {
     e.preventDefault();
 
